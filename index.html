@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HJ Shop — Smart Shopping</title>
+  <meta name="description" content="HJ Shop - quality gadgets, accessories and gifts.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">🚚 Fast delivery across Bangladesh • Cash on delivery available</div>
+
+  <header class="header">
+    <a class="logo" href="#home"><span>HJ</span> SHOP</a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">🛒 <span>Cart</span> <b id="cartCount">0</b></button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO HJ SHOP</p>
+        <h1>Smart products.<br><span>Better everyday.</span></h1>
+        <p>Discover useful gadgets, accessories and gifts at prices made for everyday shopping in Bangladesh.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#shop">Shop Now →</a>
+          <a class="secondary" href="#about">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-circle">HJ</div>
+        <div class="floating-card">✨ Trending<br><strong>New arrivals</strong></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div><b>🚚 Fast Delivery</b><small>Across Bangladesh</small></div>
+      <div><b>🔒 Secure Order</b><small>Simple checkout</small></div>
+      <div><b>💬 Easy Support</b><small>WhatsApp available</small></div>
+      <div><b>⭐ Quality Picks</b><small>Selected products</small></div>
+    </section>
+
+    <section class="shop section" id="shop">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>Popular Products</h2>
+        </div>
+        <div class="controls">
+          <input id="search" type="search" placeholder="Search products...">
+          <select id="category">
+            <option value="all">All categories</option>
+            <option value="Gadgets">Gadgets</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Gifts">Gifts</option>
+          </select>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="banner">
+      <div>
+        <p class="eyebrow">HJ SPECIAL</p>
+        <h2>Find something useful today.</h2>
+        <p>New products are added regularly. Follow HJ Shop for updates.</p>
+      </div>
+      <a class="primary" href="#shop">Explore Products</a>
+    </section>
+
+    <section class="about section" id="about">
+      <div>
+        <p class="eyebrow">ABOUT HJ SHOP</p>
+        <h2>Simple shopping, honest service.</h2>
+      </div>
+      <p>HJ Shop is designed as a modern Bangladesh-focused online store. Replace these demo details with your real business information, delivery policy and payment details before publishing.</p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <p class="eyebrow">CONTACT</p>
+      <h2>Need help?</h2>
+      <p>Message us on WhatsApp or Facebook for product questions and orders.</p>
+      <div class="contact-actions">
+        <a class="primary" id="whatsappLink" target="_blank">WhatsApp →</a>
+        <a class="secondary" href="https://www.facebook.com/profile.php?id=61595137439604" target="_blank">Facebook →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo"><span>HJ</span> SHOP</div>
+    <p>© <span id="year"></span> HJ Shop. All rights reserved.</p>
+  </footer>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-head"><h3>Your Cart</h3><button id="closeCart">✕</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total"><span>Total</span><strong>৳<span id="cartTotal">0</span></strong></div>
+    <button class="primary full" id="checkoutBtn">Checkout</button>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModal">✕</button>
+      <p class="eyebrow">CHECKOUT</p>
+      <h2>Complete your order</h2>
+      <form id="orderForm">
+        <label>Full name<input required name="name" placeholder="Your name"></label>
+        <label>Phone number<input required name="phone" inputmode="tel" placeholder="01XXXXXXXXX"></label>
+        <label>District<input required name="district" placeholder="District"></label>
+        <label>Address<textarea required name="address" placeholder="Village / area / full address"></textarea></label>
+        <label>Payment
+          <select name="payment">
+            <option>Cash on Delivery</option>
+            <option>bKash / Nagad (manual confirmation)</option>
+          </select>
+        </label>
+        <button class="primary full" type="submit">Place Order via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
